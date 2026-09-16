@@ -1,0 +1,45 @@
+{
+  "escopo": "Funções isoladas; dados controlados empregados apenas para testar a lógica, sem métricas ambientais. Interface e APIs externas não foram executadas.",
+  "verificacoes": [
+    {
+      "verificacao": "Três estações e 291 combinações município e data após leitura conjunta",
+      "resultado": "aprovada"
+    },
+    {
+      "verificacao": "Datas limitadas ao intervalo original de 1 de janeiro a 7 de abril de 2026",
+      "resultado": "aprovada"
+    },
+    {
+      "verificacao": "Cobertura diária de turbidez igual à reanálise independente",
+      "resultado": "aprovada"
+    },
+    {
+      "verificacao": "Ausência de turbidez negativa nas médias válidas",
+      "resultado": "aprovada"
+    },
+    {
+      "verificacao": "Bloqueio da modelagem hídrica sem NO2 e O3",
+      "resultado": "aprovada"
+    },
+    {
+      "verificacao": "Conversão explícita diferencia ISO e dia/mês",
+      "resultado": "aprovada"
+    },
+    {
+      "verificacao": "Mediana do imputador depende apenas do treinamento",
+      "resultado": "aprovada"
+    },
+    {
+      "verificacao": "Referência e contagens de treino e teste são registradas",
+      "resultado": "aprovada"
+    },
+    {
+      "verificacao": "Datas inteiras de teste posteriores a todas as datas de treino",
+      "resultado": "aprovada"
+    },
+    {
+      "verificacao": "Não há ajuste apresentado como teste quando a amostra é pequena",
+      "resultado": "aprovada"
+    }
+  ]
+}

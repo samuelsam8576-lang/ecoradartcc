@@ -1,0 +1,24 @@
+ECORADAR — PROJETO REVISADO
+
+Como executar
+1. Crie um ambiente Python 3.10+.
+2. Instale as dependências:
+   pip install pandas numpy plotly requests streamlit scikit-learn openpyxl
+3. Na pasta do projeto, execute:
+   streamlit run app.py
+
+O que foi revisado
+- Conversão explícita das datas ISO e brasileiras, sem dayfirst aplicado a formatos mistos.
+- Limpeza de turbidez negativa e pH fora do intervalo físico 0–14.
+- Agrupamento diário com contagem de leituras e critério de cobertura de 75% (216 de 288 leituras nominais).
+- Correlações calculadas em pares completos, com número de dias válidos informado.
+- Modelo de turbidez com imputação ajustada somente no treino e divisão cronológica treino/teste.
+- Inclusão de regressor ingênuo de referência, MAE, R² e tamanhos das amostras.
+- Remoção da apresentação de “acurácia” derivada de MAPE para regressão.
+- Gráficos de séries com unidades separadas para evitar mistura de escalas.
+
+Dados
+Os CSVs da pasta data/ são os arquivos locais usados pelo artigo. As consultas a APIs externas continuam dependentes de disponibilidade e podem exigir conexão com a internet.
+
+Observação
+A auditoria local reproduziu a base hídrica do período de 01/01/2026 a 07/04/2026. As métricas atmosféricas históricas do artigo anterior não foram tratadas como reproduzíveis sem os arquivos brutos das consultas à API.
